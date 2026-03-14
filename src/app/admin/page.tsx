@@ -86,7 +86,7 @@ export default function AdminDashboard() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Link
             href="/admin/costumes"
             className="bg-white border border-gold/10 p-8 hover:border-gold/30 transition-colors group"
@@ -104,6 +104,15 @@ export default function AdminDashboard() {
               RENTAL STATUS
             </h2>
             <p className="text-sm text-warm-gray">대여 상태 확인 및 변경</p>
+          </Link>
+          <Link
+            href="/admin/users"
+            className="bg-white border border-gold/10 p-8 hover:border-gold/30 transition-colors group"
+          >
+            <h2 className="font-display text-xl tracking-wider mb-2 group-hover:text-gold transition-colors">
+              MEMBER MANAGEMENT
+            </h2>
+            <p className="text-sm text-warm-gray">회원 목록 조회 및 관리</p>
           </Link>
         </div>
       </div>

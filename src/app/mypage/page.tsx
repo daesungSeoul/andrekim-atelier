@@ -3,6 +3,7 @@
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { formatPrice, formatDate, getRentalStatusLabel, getRentalStatusColor } from "@/lib/utils";
 
 interface Rental {
@@ -77,6 +78,12 @@ export default function MyPage() {
           <h1 className="font-display text-3xl font-light tracking-wider mb-2">MY ATELIER</h1>
           <div className="w-12 h-px bg-gold mx-auto mt-4 mb-3" />
           <p className="text-warm-gray text-sm">{session?.user.name}님의 대여 내역</p>
+          <Link
+            href="/mypage/edit"
+            className="inline-block mt-4 text-xs text-gold hover:text-gold-dark tracking-widest border border-gold/30 px-5 py-2 hover:bg-gold/5 transition-colors"
+          >
+            회원정보 수정
+          </Link>
         </div>
 
         {rentals.length === 0 ? (

@@ -97,7 +97,13 @@ export default function AdminCostumesPage() {
                       {costume.stock}
                     </span>
                   </td>
-                  <td className="px-5 py-4 text-right">
+                  <td className="px-5 py-4 text-right space-x-3">
+                    <Link
+                      href={`/admin/costumes/${costume.id}/edit`}
+                      className="text-gold hover:text-gold-dark text-xs tracking-widest transition-colors"
+                    >
+                      EDIT
+                    </Link>
                     <button
                       onClick={() => handleDelete(costume.id)}
                       className="text-red-400 hover:text-red-500 text-xs tracking-widest transition-colors"

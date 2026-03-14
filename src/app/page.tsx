@@ -13,11 +13,11 @@ export default async function HomePage() {
     <div>
       {/* Hero Section */}
       <section className="relative bg-charcoal text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: "radial-gradient(circle at 25% 50%, rgba(201,169,110,0.3) 0%, transparent 50%), radial-gradient(circle at 75% 50%, rgba(201,169,110,0.2) 0%, transparent 50%)"
-          }} />
-        </div>
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-charcoal/60" />
         <div className="relative max-w-7xl mx-auto px-4 py-24 sm:py-32 lg:py-40 sm:px-6 lg:px-8 text-center">
           <p className="text-gold text-xs sm:text-sm tracking-[0.5em] mb-6">
             SINCE 1962
