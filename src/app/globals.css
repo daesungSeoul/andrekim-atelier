@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+
+:root {
+  --gold: #C9A96E;
+  --gold-light: #E8D5A8;
+  --gold-dark: #A8893F;
+  --ivory: #FDFBF7;
+  --charcoal: #1A1A1A;
+  --warm-gray: #8A8478;
+}
+
+body {
+  font-family: 'Noto Serif KR', 'Cormorant Garamond', serif;
+  color: var(--charcoal);
+  background: var(--ivory);
+}
+
+.font-display {
+  font-family: 'Cormorant Garamond', 'Noto Serif KR', serif;
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+.bg-gold {
+  background-color: var(--gold);
+}
+
+.border-gold {
+  border-color: var(--gold);
+}
+
+.bg-ivory {
+  background-color: var(--ivory);
+}
+
+.text-warm-gray {
+  color: var(--warm-gray);
+}
+
+/* Elegant scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ivory);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-light);
+  border-radius: 3px;
+}
+
+/* Gold gradient text */
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtle line decoration */
+.line-ornament::before,
+.line-ornament::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-light), transparent);
+}
